@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout>
+  <p class="fixed top-10 bg-black/20 text-white">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quasi tempore
+    autem officia repellendus corrupti sed dolorum consequuntur, nobis placeat!
+  </p>
+</Layout>
+
+<style>
+  p {
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+    animation: anmt-p linear both;
+    animation-timeline: scroll();
+    animation-range: 0 5rem;
+  }
+
+  @keyframes anmt-p {
+    to {
+      color: #172454;
+      background-color: rgba(133, 36, 36, 0.5);
+    }
+  }
+</style>
